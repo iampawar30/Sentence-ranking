@@ -1,0 +1,17 @@
+from nltk.corpus import wordnet
+
+syn = wordnet.synsets('coffee')[0]
+
+>>> syn.hypernym_paths()
+[[Synset('entity.n.01'), Synset('physical_entity.n.01'), Synset('matter.n.03'), Synset('substance.n.07'), Synset('food.n.01'), Synset('beverage.n.01'), Synset('coffee.n.01')], [Synset('entity.n.01'), Synset('physical_entity.n.01'), Synset('matter.n.03'), Synset('substance.n.01'), Synset('fluid.n.01'), Synset('liquid.n.01'), Synset('beverage.n.01'), Synset('coffee.n.01')], [Synset('entity.n.01'), Synset('abstraction.n.06'), Synset('relation.n.01'), Synset('part.n.01'), Synset('substance.n.01'), Synset
+('fluid.n.01'), Synset('liquid.n.01'), Synset('beverage.n.01'), Synset('coffee.n.01')]]
+
+>>> wn.synset('coffee.n.01').lowest_common_hypernyms(wn.synset('hot.n.01'))
+
+
+>>> syn.hypernyms()[0]
+Synset('beverage.n.01')
+
+
+>>> syn.hypernyms()[0].hyponyms()
+[Synset('alcohol.n.01'), Synset('cider.n.01'), Synset('cocoa.n.01'), Synset('coffee.n.01'), Synset('cooler.n.02'), Synset('drinking_water.n.01'), Synset('fizz.n.01'), Synset('fruit_drink.n.01'), Synset('fruit_juice.n.01'), Synset('ginger_beer.n.01'), Synset('hydromel.n.01'), Synset('mate.n.09'), Synset('milk.n.01'), Synset('mixer.n.02'), Synset('near_beer.n.01'), Synset('oenomel.n.01'), Synset('potion.n.01'), Synset('refresher.n.02'), Synset('smoothie.n.02'), Synset('soft_drink.n.01'), Synset('tea-like_drink.n.01'), Synset('tea.n.01'), Synset('wish-wash.n.01')]
